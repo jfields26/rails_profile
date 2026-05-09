@@ -1,0 +1,333 @@
+
+/* 
+
+Prof. Tarimo
+dhsjldhq w
+qdlhwqjkdhwqjkl 
+qdlqkjwdhejq kld
+dw  jkdhwqkjd 
+
+*/
+
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+  }
+  body {
+    margin-bottom: 60px; /* Margin bottom by footer height */
+  
+  }
+  .footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px; /* Set the fixed height of the footer here */
+    line-height: 60px; /* Vertically center the text there */
+    background-color: #f5f5f5;
+  }
+  
+  
+  /* Custom page CSS
+  -------------------------------------------------- */
+  /* Not required for template or sticky footer method. */
+  
+  .container {
+    width: auto;
+    padding: 15px 15px;
+  }
+  
+  
+  
+  /* traditional bullet creation for my own reference, please ignore*/
+  /*.custom-list {
+    list-style-type: none; /* Main bullets - filled circles */
+    /*padding-left: 20px;
+  }
+  
+  .custom-list ul li {
+    position: relative;
+    margin-bottom: 5px;
+  }
+  
+  .custom-list ul {
+    list-style-type: circle; /* Open circle for nested items */
+    /*margin-left: 20px; /* Indent the nested list */
+    /*padding-left: 20px; /* Add padding to ensure space between bullets */
+  /*}
+  
+  .custom-list ul li::before {
+    content: none; /* Unicode for an open circle (•) */
+    /*position: absolute;
+    left: -20px; /* Position the bullet outside of the list item */
+    /*font-size: 1.2em; /* Size of the bullet */
+    /*color: black;
+  }
+  
+  
+  
+  .custom-list li {
+    position: relative;
+    padding-left: 25px; /* Space for bullet */
+    /*cursor: pointer; /* Show pointer on hover */
+  /*}
+  
+  .custom-list li::before {
+    content: "\2022"; /* Unicode for • (bullet) */
+    /*position: absolute;
+    left: 0;
+    font-size: 20px;
+    color: black;
+  }
+  
+  .custom-list li.checked::before {
+    content: "\2714"; /* Unicode for ✔ (checkmark) */
+    /*color: green;
+  }
+  
+  .custom-list ul ul {
+    list-style-type: none; /* Remove bullets from second level nested list */
+    /*padding-left: 40px; /* Further indent second level items */
+  /*}
+  
+  /* Custom bullet for second level indented items (square) */
+  /*.custom-list ul ul li::before {
+    content: "\25A0"; /* Unicode for filled square (■) */
+    /*position: absolute;
+    left: -20px;
+    color: gray;
+    font-size: 1.2em;
+  }*/
+  
+  
+  
+  
+  
+  /* Remove default bullets from the main list */
+  .custom-list {
+    list-style-type: none; /* Main bullets - filled circles */
+    padding-left: 20px; /* Space for the main list */
+  }
+  
+  .custom-list ul li {
+    position: relative;
+    margin-bottom: 5px;
+  }
+  
+  /* Regular list items with a solid bullet (●) */
+  .custom-list li {
+    position: relative;
+    padding-left: 25px; /* Space for the bullet */
+    cursor: pointer; /* Show pointer on hover */
+  }
+  
+  /* Regular list item bullet (solid circle) */
+  .custom-list li::before {
+    content: "\2022"; /* Solid bullet (●) */
+    position: absolute;
+    left: 0;
+    font-size: 20px;
+    color: black;
+  }
+  
+  /* For singly indented items with an open circle (○) */
+  .custom-list ul {
+    list-style-type: none; /* Open circle for nested items */
+    padding-left: 20px; /* Indentation for nested list */
+  }
+  
+  /*.custom-list ul {
+    list-style-type: circle;
+    margin-left: 20px;
+    padding-left: 20px;
+  }*/
+  
+  .custom-list ul.checked::before {
+    content: "\2714";
+    color: green;
+  }
+  
+  /* For singly indented items (open circle) */
+  .custom-list ul li::before {
+    content: "\25CB"; /* Open circle (○) */
+    position: absolute;
+    left: -5px; /* Adjust for indentation */
+    top: 5px;
+    color: grey;
+    font-size: .6em;
+  }
+  
+  /* When an item is checked (add a checkmark) */
+  .custom-list li.checked::before {
+    content: "\2714"; /* Unicode for checkmark (✔) */
+    color: green; /* Green checkmark color */
+  }
+  
+  /* Ensure the checkmark also works for singly indented items */
+  .custom-list ul li.checked::before {
+    content: "\2714"; /* Unicode for checkmark (✔) */
+    color: green; /* Green checkmark color */
+    font-size: 1.2em;
+    top: 0px;
+  }
+  
+  /* Style for nested lists (second and deeper levels) */
+  .custom-list ul ul {
+    list-style-type: none; /* Remove bullets from second level nested list */
+    padding-left: 40px; /* Further indent second level items */
+  }
+  
+  /* Custom bullet for second-level nested items (filled square ■) */
+  .custom-list ul ul li::before {
+    content: "\25A0"; /* Unicode for filled square (■) */
+    position: absolute;
+    left: -20px;
+    color: gray;
+    font-size: 1.2em;
+  }
+  
+  
+  
+  
+  
+  
+  .container1 {
+    padding-top: 100px;
+  }
+  
+  /* Ensure the carousel has a fixed height */
+  #carouselExampleIndicators {
+      max-width: 600px;
+      max-height: 400px;
+  }
+  
+  /* Ensures all slides are the same height */
+  .carousel-item {
+      height: 400px;
+  }
+  
+  /* Makes sure images fit correctly */
+  .carousel-item img {
+      height: 100%;
+      object-fit: cover;
+  }
+  
+  /* Fixing captions to display properly */
+  .carousel-caption {
+    position: absolute;
+    bottom: 10px; /* Positions caption at the bottom */
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
+    color: white;
+    padding: 10px;
+  }
+  
+  
+  
+  .sidebar {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    bottom: 0px;
+    width: 250px;
+    height: calc(100vh - 60px);
+    overflow-y: auto;
+    background-color: #f8f9fa;
+    padding-top: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  }
+  .sidebar .nav-item {
+    margin: 10px 0;
+  }
+  .sidebar .nav-link {
+    font-size: 18px;
+    padding: 10px 15px;
+    color: #000;
+  }
+  .sidebar .nav-link:hover {
+    background-color: #e9ecef;
+  }
+  /* Offset content to the right of the sidebar */
+  .content {
+    margin-left: 250px;
+    padding: 20px;
+    padding-top: 60px;
+  }
+  .content-section {
+    height: 300px; /* Fixed height for scrolling */
+    overflow-y: auto; /* Vertical scroll if content overflows */
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    padding: 10px;
+  }
+  
+  
+  .content-section h4 {
+    margin-top: 0;
+  }
+  
+  .navbar {
+    position: fixed;
+    width: 100%;
+  }
+  
+  
+  /*.gridContainer {
+    justify-content: center;
+    padding-top: 50vh;
+  }*/
+  
+  
+  /*
+  .gradient-text-container {
+    display: inline-block;
+  }
+  
+  .gradient-text {
+    font-size: 4rem;
+    font-weight: bold;
+    background-image: linear-gradient(45deg, red, yellow, green, blue, indigo, violet);
+    -webkit-background-clip: text;
+    color: transparent;
+    display: inline-block;
+    background-size: 400% 400%;
+    animation: gradientMove 3s linear infinite;
+  }
+  
+  @keyframes gradientMove{
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }*/
+  
+  .gradient-text-container {
+    display: inline-block;
+  }
+  
+  .gradient-text {
+    font-size: 4rem;
+    font-weight: bold;
+    background-image: linear-gradient(45deg, red, yellow, green, blue, indigo, violet, red);
+    -webkit-background-clip: text;
+    color: transparent;
+    display: inline-block;
+    background-size: 300% 100%;
+    animation: gradientMove 6s linear infinite;
+  }
+  
+  @keyframes gradientMove {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 150% 50%;
+    }
+  }
+  
+  

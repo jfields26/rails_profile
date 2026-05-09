@@ -1,0 +1,71 @@
+<div class="container text-center mt-5 pt-5 px-5">
+
+  <h2 class="mb-4">Sunsets</h2>
+
+    <% content_for :dropdown_menu do %>
+        <%= link_to "Index page", root_path, class: "dropdown-item" %>
+        <a class="dropdown-item" href="#">Another action</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">Something else here</a>
+    <% end %>
+
+    <div class="row" style="display: flex; flex-wrap: nowrap;">
+
+        <div class="col-sm-4 text-center">
+            <%= image_tag "ss1.jpg", class: "img-fluid", alt: "sunset image 1" %>
+            <figcaption class="figure-caption">
+            A sunset from my dorm window.
+            </figcaption>
+        </div>
+
+        <div class="col-sm-4 text-center">
+            <%= image_tag "ss2.jpg", class: "img-fluid", alt: "sunset image 2" %>
+            <figcaption class="figure-caption">
+            Sun setting over my backyard at home.
+            </figcaption>
+        </div>
+
+        <div class="col-sm-4 text-center">
+            <%= image_tag "ss3.jpg", class: "img-fluid", alt: "sunset image 3" %>
+            <figcaption class="figure-caption">
+            A picture I took while visiting family.
+            </figcaption>
+        </div>
+
+    </div>
+
+<!--
+  <div class="row">
+    <div class="column">
+      <%= image_tag "ss1.jpg", alt: "sunset image 1" %>
+      <figcaption>A sunset from my dorm window.</figcaption>
+    </div>
+
+    <div class="column">
+      <%= image_tag "ss2.jpg", alt: "sunset image 2" %>
+      <figcaption>Sun setting over my backyard at home.</figcaption>
+    </div>
+
+    <div class="column">
+      <%= image_tag "ss3.jpg", alt: "sunset image 3" %>
+      <figcaption>A picture I took while visiting family.</figcaption>
+    </div>
+  </div>
+  -->
+
+  <div class="mb-5">
+    <p>
+      I enjoy the vibrant colors of sunsets.
+      I like taking a moment to see something unique
+      that changes based on multiple variables
+      including season and weather.
+    </p>
+  </div>
+
+  
+
+  <%= link_to "View CSS-Styled Version",
+      sunsets_css_path,
+      class: "btn btn-primary mb-5" %>
+
+</div>

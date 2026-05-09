@@ -1,0 +1,98 @@
+<div class="container mt-5 pt-5">
+
+  <h2>Sunsets</h2>
+
+  <% content_for :dropdown_menu do %>
+    <%= link_to "Index page", root_path, class: "dropdown-item" %>
+    <a class="dropdown-item" href="#">Another action</a>
+    <div class="dropdown-divider"></div>
+    <a class="dropdown-item" href="#">Something else here</a>
+  <% end %>
+
+  <div class="row">
+    <div class="column">
+      <%= image_tag "ss1.jpg", alt: "sunset image 1" %>
+      <figcaption>A sunset from my dorm window.</figcaption>
+    </div>
+
+    <div class="column">
+      <%= image_tag "ss2.jpg", alt: "sunset image 2" %>
+      <figcaption>Sun setting over my backyard at home.</figcaption>
+    </div>
+
+    <div class="column">
+      <%= image_tag "ss3.jpg", alt: "sunset image 3" %>
+      <figcaption>A picture I took while visiting family.</figcaption>
+    </div>
+  </div>
+
+  <div class="paragraph">
+    <p>
+      I enjoy the vibrant colors of sunsets.
+      I like taking a moment to see something unique
+      that changes based on multiple variables
+      including season and weather.
+    </p>
+  </div>
+
+  <%= link_to "View Bootstrap-Styled Version",
+      sunsets_path,
+      class: "button" %>
+
+</div>
+
+
+<!-- custom modal -->
+<div id="errorModal" class="custom-modal">
+  <div class="custom-modal-content">
+    <h4>This page says</h4>
+    <p>
+      Page not found! Try searching for
+      'Home', 'About', 'Soccer', 'Music', or 'Sunsets'.
+    </p>
+    <button id="closeModal" class="ok-button">OK</button>
+  </div>
+</div>
+
+<script>
+document.getElementById("searchForm").addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  const query =
+    document.getElementById("searchInput")
+      .value
+      .trim()
+      .toLowerCase();
+
+  const pages = [
+    { name: "home", url: "/" },
+    { name: "about", url: "/about" },
+    { name: "soccer", url: "/soccer", keywords: ["football", "futbol"] },
+    { name: "music", url: "/music" },
+    { name: "sunsets", url: "/sunsets" }
+  ];
+
+  const foundPage = pages.find(page =>
+    page.name.includes(query) ||
+    (page.keywords && page.keywords.includes(query))
+  );
+
+  if (foundPage) {
+    window.location.href = foundPage.url;
+  } else {
+    document.getElementById("errorModal").style.display = "block";
+  }
+});
+
+document.getElementById("closeModal").addEventListener("click", function() {
+  document.getElementById("errorModal").style.display = "none";
+});
+
+window.onclick = function(event) {
+  const modal = document.getElementById("errorModal");
+
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
+};
+</script>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= content_for(:title) || "Rails Profile" %></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= yield :head %>
+
+    <%# Enable PWA manifest for installable apps (make sure to enable in config/routes.rb too!) %>
+    <%#= tag.link rel: "manifest", href: pwa_manifest_path(format: :json) %>
+
+    <link rel="icon" href="/icon.png" type="image/png">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/icon.png">
+
+    <%# Includes all stylesheet files in app/assets/stylesheets %>
+    <!--<%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>-->
+    <%= stylesheet_link_tag "application", media: "all", "data-turbo-track": "reload" %>
+    <!--<%= javascript_importmap_tags %>-->
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-dark bg-dark fixed-top navbar-expand px-3">
+
+      <%= link_to root_path, class: "navbar-brand d-flex align-items-center" do %>
+        <%= image_tag "jarred_image.jpg", width: 30, height: 30, alt: "Jarred Fields", class: "me-2" %>
+        Jarred Fields
+      <% end %>
+
+      <div class="ms-auto d-flex align-items-center">
+        <ul class="nav nav-pills align-items-center me-3">
+
+          <li class="nav-item">
+            <%= link_to root_path, class: "nav-link #{active_class(root_path)}", id: "button1" do %>
+              <i class="fas fa-home"></i> Home Page
+            <% end %>
+          </li>
+
+          <li class="nav-item">
+            <%= link_to about_path, class: "nav-link #{active_class(about_path)}" do %>
+              <i class="fas fa-info-circle"></i> About Me
+            <% end %>
+          </li>
+
+          <li class="nav-item">
+            <%= link_to soccer_path, class: "nav-link #{active_class(soccer_path)}" do %>
+              <i class="fas fa-futbol"></i> Soccer
+            <% end %>
+          </li>
+
+          <li class="nav-item">
+            <%= link_to music_path, class: "nav-link #{active_class(music_path)}" do %>
+              <i class="fas fa-music"></i> Music
+            <% end %>
+          </li>
+
+          <li class="nav-item">
+            <%= link_to sunsets_path, class: "nav-link #{active_class(sunsets_path)}" do %>
+              <i class="fas fa-sun"></i> Sunsets
+            <% end %>
+          </li>
+
+          <!--
+          <% if action_name.in?(%w[sunsets sunsets_css]) %>
+            <li class="nav-item">
+              <%= link_to sunsets_css_path, class: "nav-link #{active_class(root_path)}" do %>
+                <i class="fas fa-sun"></i> Sunsets-css
+              <% end %>
+            </li>
+          <% end %>
+          -->
+          <% if current_page?(sunsets_path) || current_page?(sunsets_css_path) %>
+            <li class="nav-item">
+              <%= link_to sunsets_css_path,
+                class: "nav-link #{'active' if current_page?(sunsets_css_path)}" do %>
+                <i class="fas fa-sun"></i> Sunsets-css
+              <% end %>
+            </li>
+          <% end %>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false">
+              Dropdown
+            </a>
+
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <%= yield :dropdown_menu %>
+            </div>
+          </li>
+
+        </ul>
+
+        <form class="form-inline ml-auto d-flex align-items-center" id="searchForm">
+          <input class="form-control mr-sm-2" type="search" id="searchInput" placeholder="Search pages..." aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+
+    </nav>
+
+    <script>
+      document.getElementById("searchForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        const query = document.getElementById("searchInput").value.trim().toLowerCase();
+
+        const pages = [
+          { name: "home", url: "/" },
+          { name: "about", url: "/about" },
+          { name: "soccer", url: "/soccer", keywords: ["football", "futbol"] },
+          { name: "music", url: "/music" },
+          { name: "sunsets", url: "/sunsets" }
+        ];
+
+        const foundPage = pages.find(page =>
+          page.name.includes(query) ||
+          (page.keywords && page.keywords.includes(query))
+        );
+
+        if (foundPage) {
+          window.location.href = foundPage.url;
+        } else {
+          alert("Page not found! Try Home, About, Soccer, Music, or Sunsets.");
+        }
+      });
+    </script>
+
+    <!-- <div class="mt-4"></div> -->
+    <!-- <div style="height: 80px;"></div> -->
+
+    <%= yield %>
+
+    <!--<footer class="footer text-center">
+      <div class="container">
+      <span class="text-muted">Thanks for visiting my page. Come Again Soon.</span> <i class="far fa-copyright"></i>
+      </div>
+    </footer> -->
+    
+
+    <footer class="footer text-center mt-0">
+      <div class="container">
+        <span class="text-muted">
+          Thanks for visiting my page. Come Again Soon.
+        </span>
+        <i class="far fa-copyright"></i>
+      </div>
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="bootstrap-4.1.3-dist/js/bootstrap.min.js"></script>
+
+  </body>
+
+
+</html>

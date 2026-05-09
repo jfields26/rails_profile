@@ -1,0 +1,152 @@
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 15px;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.container h2 {
+    margin-bottom: 1.5rem;
+}
+
+/*
+.row {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+*/
+
+.column {
+    flex: 0 0 30%;
+    max-width: 30%;
+    padding: 15px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.column img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.column figcaption {
+    color: #6c757d;
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+}
+
+.paragraph p {
+    margin-bottom: 3rem;
+    color: #555;
+    font-size: 1rem;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.button {
+    display: inline-block;
+    padding: 0.375rem 0.75rem;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.button:hover {
+    color: #fff;
+    text-decoration: none;
+    background-color: #0062ca;
+}
+
+
+
+.footer {
+    width: 100%;
+    height: 60px;
+    line-height: 60px; /* vertically center the text */
+    background-color: #f5f5f5;
+    text-align: center;
+    position: relative;  /* keep it within normal flow */
+    bottom: 0;
+    margin-top: auto;    /* adds some space above the footer */
+}
+
+
+
+/* Modal background */
+.custom-modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1050; /* above most content */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.5); /* Black with opacity */
+}
+  
+/* Modal content box */
+.custom-modal-content {
+    background-color: #fff;
+    margin: 10% auto; /* 10% from top, centered horizontally */
+    padding: 30px;
+    border-radius: 0.5rem;
+    width: 90%;
+    max-width: 450px;
+    box-shadow: 0 3px 9px rgba(0,0,0,.5);
+    font-family: Arial, sans-serif;
+    color: #212529;
+    font-size: .85rem;
+    position: relative;
+}
+
+
+  
+  
+/* Close button */
+/* .custom-close {
+    color: #aaa;
+    float: right;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+}
+  
+.custom-close:hover, .custom-close:focus {
+    color: black;
+    text-decoration: none;
+} */
+  
+
+
+.ok-button {
+    padding: 6px 16px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 50px;  /* makes it fully rounded on the sides */
+    font-size: 0.875rem;
+    cursor: pointer;
+  
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+  
+    transition: background 0.3s ease-in-out;
+}
+
+.ok-button:hover {
+    background: #0056b3;
+}

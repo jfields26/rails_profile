@@ -1,0 +1,118 @@
+<div class="container mt-5 pt-3">
+
+    <!-- Quote -->
+    <div class="mb-5 text-center"  style="padding-top: 45px;">
+        <blockquote class="blockquote mb-0">
+            <p>
+                "Football is about joy. <br>
+                It's about dribbling. <br>
+                I favor every idea that makes the <br>
+                game beautiful. Every good idea has to last."
+            </p>
+            <footer class="blockquote-footer">
+                Ronaldinho, <cite title="Source Title">Brazilian legend</cite>
+            </footer>
+        </blockquote>
+    </div>
+
+    <% content_for :dropdown_menu do %>
+        <a class="dropdown-item" href="https://www.youtube.com/watch?v=cIIRiNtHGE0">Iniesta and xavi highlights</a>
+        <a class="dropdown-item" href="https://www.youtube.com/watch?v=yDg4D4DLH78">Ronaldinho highlights</a>
+        <a class="dropdown-item" href="https://www.youtube.com/watch?v=Pdp2WaOO-DQ">Xabi Alonso highlights</a>
+        <a class="dropdown-item" href="https://www.youtube.com/watch?v=g5ZXU1M2fns">Thierry Henry highlights</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="https://www.youtube.com/watch?v=t9ObLFw7N-E">Van Persie highlights</a>
+    <% end %>
+
+    <!-- Carousel -->
+    <div id="carouselExampleIndicators"
+         class="carousel slide mx-auto mb-5"
+         data-ride="carousel">
+
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+        </ol>
+
+        <div class="carousel-inner">
+
+            <div class="carousel-item active">
+                <%= image_tag "ronaldinho.jpg", class: "d-block w-100", alt: "Ronaldinho" %>
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Ronaldinho</h5>
+                    <p>A magician with the ball at his feet</p>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <%= image_tag "henry.jpg", class: "d-block w-100", alt: "Thierry Henry" %>
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Thierry Henry</h5>
+                    <p>One of the greatest Premier League strikers</p>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <%= image_tag "rvp.jpg", class: "d-block w-100", alt: "Robin Van Persie" %>
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Robin van Persie</h5>
+                    <p>A legendary Dutch striker</p>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <%= image_tag "iniesta.jpg", class: "d-block w-100", alt: "Iniesta" %>
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Andrés Iniesta</h5>
+                    <p>One of the greatest midfielders of all time</p>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <%= image_tag "xabi_alonso.jpg", class: "d-block w-100", alt: "Xabi Alonso" %>
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Xabi Alonso</h5>
+                    <p>A serial winner everywhere he went</p>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <%= image_tag "xavi.jpg", class: "d-block w-100", alt: "Xavi" %>
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Xavi</h5>
+                    <p>A Spanish icon</p>
+                </div>
+            </div>
+
+        </div>
+
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+
+    </div>
+
+    <!-- Legends -->
+    <div class="text-center">
+        <h1>Legends</h1>
+        <p>
+            These are some of my favorite players that I feel are very underrated and don't get the appreciation they deserve.<br>
+            My favorite player of all time is Robin Van Persie, and you can find highlights of all of these players in the dropdown menu.
+        </p>
+    </div>
+    
+
+
+</div>
+
+<footer class="bg-dark text-white text-center py-3 mt-5">
+    <i class="far fa-copyright"></i> 2025 My Website | All rights reserved.
+</footer>

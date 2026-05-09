@@ -1,0 +1,120 @@
+<div class="container-fluid px-3" style="padding-top: 90px;">
+
+    <% content_for :dropdown_menu do %>
+        <%= link_to "Index page", root_path, class: "dropdown-item" %>
+        <a class="dropdown-item" href="#">Another action</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">Something else here</a>
+    <% end %>
+
+    <div class="gradient-text-container mb-4 text-start">
+        <h1 class="gradient-text">This page is all about me</h1>
+    </div>
+
+    <div class="mb-4">
+        <p>
+            At first I wasn't really sure what to include on this page but I decided to have some fun with the heading and then try to use some pictures to describe
+            the main parts of my life. This was an interesting choice considering I rarely take pictures so I used google to help with that part.
+        </p>
+    </div>
+
+    <!-- Soccer -->
+    <div class="d-flex mb-5">
+        <div class="me-3">
+            <%= image_tag "ball.jpg", width: 50, height: 50, alt: "Generic soccer ball image" %>
+        </div>
+
+        <div>
+            <h5>Soccer</h5>
+
+            <p>
+                As you probably could have guessed from the page titled "Soccer", soccer is a huge part of my life.
+                I have been playing since I was little, I joined my first organized team when I was 7 and I never stopped.
+                In addition to always playing, I am also always watching games whenever I can.
+            </p>
+
+            <div class="d-flex mt-3 ms-4">
+                <div class="me-3">
+                    <%= image_tag "mnu.jpg", width: 50, height: 50, alt: "Manchester United logo" %>
+                </div>
+
+                <div>
+                    <h5>Manchester United</h5>
+
+                    <p>
+                        My favorite team is a team from England called Manchester United.
+                        I chose them as my favorite because when I picked my favorite player,
+                        that was the team he played for.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- School -->
+    <div class="d-flex mb-5">
+        <div class="me-3">
+            <%= image_tag "student.jpg", width: 50, height: 50, alt: "Student image" %>
+        </div>
+
+        <div>
+            <h5>School</h5>
+
+            <p>
+                School is also very important to me. I enjoy learning and am currently double majoring
+                in neuroscience and computer science.
+            </p>
+
+            <div class="d-flex mt-3 ms-4">
+                <div class="me-3">
+                    <%= image_tag "brain.jpg", width: 50, height: 50, alt: "Brain image" %>
+                </div>
+
+                <div>
+                    <h5>Neuroscience</h5>
+
+                    <p>
+                        In high school I took AP Psychology and a neuroscience elective at the same time
+                        and I found the brain really interesting during that time.
+                        During my first two years of college I took the first few biology and chemistry classes
+                        and the combination of these lead me back to the brain.
+                    </p>
+                </div>
+            </div>
+
+            <div class="d-flex mt-3 ms-4">
+                <div class="me-3">
+                    <%= image_tag "cs.jpg", width: 50, height: 50, alt: "Computer science image" %>
+                </div>
+
+                <div>
+                    <h5>Computer Science</h5>
+
+                    <p>
+                        I had been told to start coding and try computer science by many people for many years
+                        and I just never started. Then, last spring, I needed to take my ConnCourse requirement
+                        and COM 110 was a class that fulfilled that requirement so I figured I would try it.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Reading -->
+    <div class="d-flex mb-5">
+        <div class="me-3">
+            <%= image_tag "book.jpg", width: 50, height: 50, alt: "Book image" %>
+        </div>
+
+        <div>
+            <h5>Reading</h5>
+
+            <p>
+                On the rare occasion I have some free time, I will likely be reading.
+                When I was younger I had a lot more time and I was always reading.
+                I read anything and everything I could get my hands on.
+            </p>
+        </div>
+    </div>
+
+</div>

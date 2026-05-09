@@ -1,0 +1,126 @@
+
+
+<div class="container text-start">
+
+    <% content_for :dropdown_menu do %>
+        <%= link_to "Index page", root_path, class: "dropdown-item" %>
+        <a class="dropdown-item" href="#">Another action</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">Something else here</a>
+    <% end %>
+
+    <div class="p-5 mb-4 bg-secondary-subtle rounded-3">
+        <h1 class="display-4">Jarred Fields</h1>
+        <p id = "paragraph1" class="lead"><i class="fas fa-home"></i> Hello and welcome to my website</p>
+        <hr class="my-4">
+        <p>
+        </br>
+        This site was created for COM 214: Web Technologies & Devlopment. It has 5 pages that can be accessed using the navigation bar at the top of the screen
+        or by searching for a page name in the search bar. I picked some topics for the pages at random and tried to use some variety of styling throughout
+        the site. There is also a sixth page created entirely with css that can be opened with the button on the "Sunsets" page. <br><br>
+
+        Here are the instructions for this assignment:<br>
+        For your PA02, you are going to create your personal portfolio website, you can revisit the partial sample demo that I showed in class since Class 5 
+        (see profile_site.zip on Moodle), or your own version of the site that you have been working on during class exercises. Your website will contain 
+        multiple pages with your info, portfolio, and other details; the majority of the content and design/theme is up to you - except for the requirements to 
+        fully use Bootstrap and a few other styles & technical requirements - listed below. </p>
+        <a class="btn btn-primary btn-lg" href="https://docs.google.com/document/d/1KttG1yeqseoD5QFINjHIT7P0G9eklf7zVnqQKPaiBk0/edit?tab=t.0" role="button"><i class="fas fa-list-ul" style="color: #63E6BE;"></i> See the rubric here</a>
+    </div>
+
+    <div class="card">
+        <h5 class="card-header"><i class="fas fa-tasks"></i> My ToDos</h5>
+        <div class="card-body">
+            <ul class="custom-list">
+                <li>(20 pts) Structure: HTML fiels, Bootstrap, FontAwesome, and an external CSS file</li>
+                <li>(20 pts) At least 5 different HTML pages</li>
+                <li>(15 pts) At least 5 different custom CSS styles/rules from your ustom CSS file. No inline or internal styles in your HTML files</li>
+                <li>(5 pts) Use of FontAwesome icon library throughout your pages</li>
+                <li>(20 pts) Your page should be fully “Bootstrapped”, ie. most, if not all, of your HTML content, should be styled/implemented as Bootstrap
+                components. You are welcome to use a similar library here, but using one is required</li>
+                <li>Bootstrap vs. Custom CSS: You will recreate some of the style/design of ONE of your original 5 pages from Bootstrap to plain CSS. So pick 
+                one of your web pages and follow the following guidelines to recreate it into a sixth page:</li>
+                <ul>
+                    <li>Your original page will use the Bootstrap grid and columns layout to arrange its content in two or three responsive columns, ie. 
+                    your 2 or 3 columns will collapse to individual full-width sections on a small display size.</li>
+                    <ul>
+                        <li>Recreate the page where the div containing the content or columns mentioned above is designed and created using custom CSS. Here 
+                        including the responsiveness on different display sizes</li>
+                        <li>This design and responsiveness were demonstrated during Class 7, refer to it, your code, and any uploaded demo code.</li>
+                    </ul>
+                    <li>Add at least one Bootstrap Alert on the original page, then recreate the style using CSS</li>
+                    <li>Add at least one Bootstrap button on the original page, then recreate the style using CSS</li>
+                </ul>
+                <li>Submission: Create your website inside a folder called pa02_your-username, when done - compress your folder into a zip file and submit or 
+                upload it to the PA02 page on Moodle</li>
+                
+            </ul>
+            <p>This list is checkable so you can check off items as they are completed!</p>
+        </div>
+    </div>
+
+
+    <!--traditional bullet creation for my own reference, please ignore-->
+    <!--<script>
+        document.querySelectorAll(".custom-list li").forEach(item => {
+            item.addEventListener("click", function() {
+                this.classList.toggle("checked");
+            });
+        });
+    </script>-->
+
+    <script>
+        // JavaScript to toggle the checked class on click
+        document.querySelectorAll('.custom-list li').forEach(function(item) {
+            item.addEventListener('click', function() {
+                this.classList.toggle('checked'); // Toggle the 'checked' class
+            });
+        });
+    </script>
+
+</div>
+
+
+
+<!--
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="bootstrap-4.1.3-dist/js/bootstrap.min.js"></script>
+<script src="fontawesome-free-5.5.0-web/js/all.min.js"></script>
+<script src="javascript.js"></script>
+-->
+
+<!--<script>
+    $(document).ready(function () {
+    // Get the current page filename (e.g., "about.html" from "www.example.com/about.html")
+    // let currentPage = window.location.pathname.split("/").pop();
+    let currentPage = window.location.pathname;
+
+    // Loop through all navbar links
+    $(".nav-link").each(function () {
+    let linkPage = $(this).attr("href"); // Get the href attribute of the link
+
+            // If the link matches the current page, add 'active' class
+            if (linkPage === currentPage || (linkPage === "/" && currentPage === "")) {
+                $(this).addClass("active");
+            } else {
+                $(this).removeClass("active"); // Remove active from other links
+            }
+        });
+    });
+</script> -->
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    let currentPage = window.location.pathname;
+
+    document.querySelectorAll(".nav-link").forEach(function(link) {
+        let linkPage = link.getAttribute("href");
+
+        if (linkPage === currentPage || (linkPage === "/" && currentPage === "")) {
+            link.classList.add("active");
+        } else {
+            link.classList.remove("active");
+        }
+    });
+});
+</script>
